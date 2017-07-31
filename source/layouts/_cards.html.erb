@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <% data.cities.each do |city| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url(<%= city.picture_city %>);">
+          <div class="card-category"><%= city.name %></div>
+          <div class="card-description">
+            <h2><%= city.adress %></h2>
+            <p><%= city.stuff %></p>
+          </div>
+          <%= image_tag "#{city.picture_user}", class: "card-user" %>
+          <%= link_to "","#", class: "card-link" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
