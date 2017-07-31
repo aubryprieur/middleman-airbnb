@@ -1,0 +1,26 @@
+<%= partial "layouts/banner-show" %>
+
+<!-- Access data.flats with owner's name as key -->
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+<div class="container">
+  <div class="row ">
+    <div class="col-xs-12 col-sm-12 owner-description">
+    <div>
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class: "avatar-large" %>
+      <p><%= flat.name %></p>
+      </div>
+      <div>
+        <h1><%= flat.description %></h1>
+        <p><%= flat.city_name %></p>
+      </div>
+          <div >
+      <%= partial "layouts/book-form" %>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+
